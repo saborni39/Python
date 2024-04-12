@@ -1,0 +1,46 @@
+1. https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+
+Using New-Item in PowerShell:
+If you're using PowerShell, you can also use the New-Item cmdlet to create a new empty file.
+New-Item -Path . -Name "newfile.txt" -ItemType "File"
+
+
+###
+Step 2: Using Git with the File
+Once you have edited your file, you need to use Git to stage, commit, and optionally push the changes to a remote repository. Here's how you can do that:
+
+Initialize Git Repository (if not already done)
+If your folder is not already a Git repository, you can initialize it by running:
+
+powershell
+Copy code
+cd E:\mygitprojects  # Change to your project directory if not already there
+git init
+Stage Changes
+To stage your edited file (newfile.txt), use the git add command:
+
+powershell
+Copy code
+git add newfile.txt
+Commit Changes
+After staging, you'll need to commit your changes with a message:
+
+powershell
+Copy code
+git commit -m "Updated newfile.txt"
+Add Remote Repository (if not already done)
+If you haven't already configured a remote repository, you can add one:
+
+powershell
+Copy code
+git remote add origin <repository-url>
+Replace <repository-url> with the URL of your remote Git repository (e.g., a GitHub repository URL).
+
+Push Changes to Remote Repository
+Finally, you can push your commit to the remote repository:
+
+powershell
+Copy code
+git push origin master
+If you're using a branch other than master, replace master with the name of your branch.
+
